@@ -4,7 +4,7 @@
 $post_data = $_POST['data'];
 if (!empty ($post_data)) {
     $dir = '/';
-    $filename = 'score.txt';
+    $filename = 'scoreboard.txt';
     $handle = fopen($filename, "w");
     fwrite($handle, $post_data);
     fclose($handle);
