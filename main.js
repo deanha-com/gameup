@@ -105,7 +105,6 @@ function gameOver() {
     highScore();
     $scoreCounter = 0;
     $('#touchArea').fadeOut('fast', function() {});;
-    $('#touchArea-locked').delay(4000).hide(0);
     // $touchArea.html('<br><br>READY.<br>GO!<br>'); //touchended
     $('#points').text("");
 }
