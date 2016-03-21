@@ -1,0 +1,135 @@
+/*  CSS STYLING */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,700);
+
+
+* {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: ;
+    }
+
+p {
+	padding: 5px 10px;
+    }
+
+h1 {
+	font-size: 48px
+    }
+
+#touchArea {
+    width:100%;
+    height:100%;
+    position: fixed;
+    background: #33cc33;
+    font-size:48px;
+    color:#fff;
+    bottom: 0;
+
+    }
+
+#touchArea-locked {
+width:100%;
+height:100%;
+position: fixed;
+background:red;
+font-size:48px;
+color:#fff;
+bottom: 0;
+
+    }
+
+#lastscore {
+    width:100%;
+    background: gold;
+    font-size:22px;
+    color:#fff;
+	padding: 5px 0;
+    }
+
+#topscore {
+    width:100%;
+    background: #1da5fb;
+    font-size:24px;
+    font-weight: 700;
+    color: #fff;
+	padding: 5px 0;
+    overflow: hidden;
+    }
+
+.btn {
+    background-color: #1da5fb;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    }
+
+#start{
+    background-color: #1da5fb;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 60px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    }
+
+button:hover {
+    background-color: #60C0FC;
+    color: white;
+    }
+
+
+#soundon, #soundoff {
+    padding: 15px;
+    position: fixed;
+    top: 15px
+    left: 15px;
+}
+img {
+    padding: 5px;
+}
+
+.quit {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.again {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+#yourscore {
+    font-size: 24px;
+}
+
+
+.gradientbg{
+background: linear-gradient(230deg, #e1e1e1, #60d42a);
+background-size: 600% 600%;
+
+-webkit-animation: gradbg 6s ease infinite;
+animation: gradbg 6s ease infinite;
+}
+@-webkit-keyframes gradbg {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@keyframes gradbg { 
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
