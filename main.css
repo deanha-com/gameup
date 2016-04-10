@@ -95,7 +95,7 @@ z-index: 5;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 60px;
+    font-size: 58px;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     }
@@ -167,7 +167,7 @@ animation: gradbg 6s ease infinite;
 }
 
 .navlist {
-    margin-top: 25%;
+    margin-top: 15%;
     padding: auto;
     list-style: none;
     font-size: 42px;
@@ -283,6 +283,17 @@ a :hover {
 }
 
 
+
+
+.mainBG {
+    background: url("./bga.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    background-color:black;
+}
+
 #leaderboard{
     width:100%;
     height:100%;
@@ -292,4 +303,22 @@ a :hover {
     color:#fff;
     bottom: 0;
     z-index: 4;
+}
+
+#setting{
+    width:100%;
+    height:100%;
+    position: fixed;
+    background:purple;
+    font-size:32px;
+    color:#fff;
+    bottom: 0;
+    z-index: 4;
+}
+
+.fixBtn {
+    position: absolute;
+    align: middle;
+    bottom: 25px;
+
 }

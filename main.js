@@ -1,6 +1,9 @@
 /*******************************************************
 * Setting up the touch and tap event listeners.
 *******************************************************/
+
+var $scoreCounter = 0; // the counter for the amount of taps
+
 var getPointerEvent = function(event) {
     return event.originalEvent.targetTouches ? event.originalEvent.targetTouches[0] : event;
 };
@@ -22,12 +25,16 @@ $touchArea.on('touchstart mousedown', function(e) {
     cachedY = currY = pointer.pageY;
     // a touch event is detected      
     touchStarted = true;
-    $touchArea.html('<br><br>-'); //Touchstarted
+        if($scoreCounter === 0) {
+        startGame();
+    }
+    $scoreCounter++;
+    $touchArea.html('<br><br>' + $scoreCounter); //Touchstarted
     // detecting if after 200ms the finger is still in the same position
     setTimeout(function() {
         if ((cachedX === currX) && !touchStarted && (cachedY === currY)) {
             // Here you get the Tap event
-            $touchArea.html('<br><br>- -'); //tap
+            $touchArea.html('<br><br>' + $scoreCounter); //tap
         }
     }, 200);
 });
@@ -36,9 +43,11 @@ $touchArea.on('touchend mouseup touchcancel', function(e) {
     e.preventDefault();
     // here we can consider finished the touch event
     touchStarted = false;
-    $touchArea.html('<br><br>- - -'); //touchended
-
-    $scoreCounter++;
+    $touchArea.html('<br><br>' + $scoreCounter); //touchended
+    // if($scoreCounter === 0) {
+    //     startGame();
+    // }
+    // $scoreCounter++;
     $touchArea.html('<br><br>' + $scoreCounter);
     $('#points').text($scoreCounter);
 
@@ -51,12 +60,11 @@ $touchArea.on('touchmove mousemove', function(e) {
     currY = pointer.pageY;
     if (touchStarted) {
         // here you are swiping
-        $touchArea.html('<br><br>-'); //swiping
+        $touchArea.html('<br><br>' + $scoreCounter); //swiping
     }
 });
 
-var $scoreCounter = 0; // the counter for the amount of taps
-
+ 
 
 /*******************************************************
 * Loading all HIGHSCORE and PLAYER NAME from file.
@@ -77,9 +85,9 @@ jQuery.get('./topplayername.txt', function(data) {
 * What to do when they click the START button.
 *******************************************************/
 $(start).click(function(e) {
-    $touchArea.html('<br><br>READY?<br>GO!<br>');
+    $touchArea.html('<br><br>GO!<br>');
     $('#touchArea').fadeIn(0);
-    startGame();
+    // startGame();
 });
 
 
